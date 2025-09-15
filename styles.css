@@ -1,0 +1,41 @@
+/* Navigation Bar Active Link Highlighting */
+.navbar .nav-item .nav-link.active {
+  background-color: #007bff !important;
+  color: white !important;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 16px;
+  margin: 0 4px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+  transform: translateY(-1px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navbar .nav-item .nav-link {
+  color: #495057 !important;
+  padding: 8px 16px;
+  margin: 0 4px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  position: relative;
+  text-decoration: none !important;
+}
+
+.navbar .nav-item .nav-link:hover {
+  background-color: #f8f9fa;
+  color: #007bff !important;
+  transform: translateY(-1px);
+}
+
+/* Optional: Add subtle animation */
+@keyframes activePulse {
+  0% { box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); }
+  50% { box-shadow: 0 2px 12px rgba(0, 123, 255, 0.5); }
+  100% { box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3); }
+}
+
+.navbar .nav-item .nav-link.active {
+  animation: activePulse 2s ease-in-out infinite;
+}
+
+/* Responsive design for mobile
